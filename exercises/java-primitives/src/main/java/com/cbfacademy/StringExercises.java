@@ -50,8 +50,12 @@ public class StringExercises {
         // TODO - Write code to determine whether the input ${word} is a palindrome
 
         String newWord = "";
-            Boolean flag = true;
-        try{
+        Boolean flag = true;
+        if(word == null || word.isEmpty() || word.trim().isEmpty()) {
+            System.out.println("String is null, empty or blank.");
+              return false;
+        }else{
+            try{
             for(int i = 0 ; i < word.length();i++){
                 //System.out.println(word.charAt(i));
             }
@@ -62,7 +66,10 @@ public class StringExercises {
                 //System.out.println(newWord);
             }
             System.out.println(word + " and " + newWord );
-            if(newWord == word){
+            // String w = new String(word);
+            //String w2 = new String(newWord);
+            //System.out.println(word + " and " + newWord);
+            if(word.equalsIgnoreCase(newWord)){
                 System.out.println("The input word is a Palindrome");
                 flag = true;
             }else {
@@ -72,7 +79,8 @@ public class StringExercises {
         }catch (Exception e) {
           e.printStackTrace();
                 System.out.println("Exception in method caught");
-        }  
+        } 
+    } 
         return flag;
         
     }
@@ -81,8 +89,8 @@ public class StringExercises {
         return "String Exercises";
     }
     public static void main(String[] args) {
-        // Date d = new Date();
-            System.out.println(d);
+           // Date d = new Date();
+           // System.out.println(d);
          // System.out.println();
           //  System.out.println("\nThis is StringExercises class");
            // System.out.println(new StringExercises().isPalindrome("Juliet"));
