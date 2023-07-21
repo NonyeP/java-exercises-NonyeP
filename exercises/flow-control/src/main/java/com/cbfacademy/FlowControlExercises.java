@@ -24,13 +24,13 @@ public class FlowControlExercises {
         //System.out.println(numbers);
        
         System.out.println(numbers);
-        new FlowControlExercises().fizzbuzz(numbers);
+        new FlowControlExercises().fizzBuzz(numbers);
         new FlowControlExercises().whichMonth(12);
         new FlowControlExercises().reverse(b);
         
     }
 
-    public List<String> fizzbuzz(List<Integer> numbers) {
+    public List<String> fizzBuzz(List<Integer> numbers) {
         // TODO - Implement this method such that
         //  it creates a list where for each element of the input list ${numbers}
         //  - if the ${element} is divisible by 3, it adds “Fizz” to the list
