@@ -92,9 +92,9 @@ public class StringExercises {
            // Date d = new Date();
            // System.out.println(d);
          // System.out.println();
-          //  System.out.println("\nThis is StringExercises class");
-           // System.out.println(new StringExercises().isPalindrome("Juliet"));
-           // System.out.println(new StringExercises().howMany("hello", 'l'));
+            System.out.println("\nThis is StringExercises class");
+            System.out.println(new StringExercises().isPalindrome("Madam"));
+            System.out.println(new StringExercises().howMany("hello", 'l'));
             System.out.println(new StringExercises().fromCharacters(new char[]{'J','u','l','i','e', 't'}));
 
     }
