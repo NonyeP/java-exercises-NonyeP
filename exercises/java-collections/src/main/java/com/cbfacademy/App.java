@@ -7,5 +7,6 @@ public class App {
 
 public int[] createArrayElements(int number) {
 
-  
+  throw new RuntimeException();
+}
 }
