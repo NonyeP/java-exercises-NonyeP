@@ -1,30 +1,12 @@
 package com.cbfacademy;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CollectionsExercises {
     public static void main(String[] args) {
-        Integer[] a = new Integer[]{213, 54, 91, 187, 2001, 2023}; //[Fizz, Fizz, 91, 187, Fizz, 2023];
-        List<Integer> numbers = Arrays.asList(a);
-        ArrayList<Integer> b = new ArrayList<>();
-                b.add(1);
-                b.add(2);
-                b.add(4);
-                b.add(8);
-                b.add(11);
-                b.add(13);
-                b.add(17);
-        System.out.println(new CollectionsExercises().useArrayDeque());
-        System.out.println(new CollectionsExercises().useHashMap());
         
-        System.out.println(numbers);
-        
-        System.out.println(numbers);
-        
-        new CollectionsExercises().useLinkedList();
-        new CollectionsExercises().useStack();
-       
-        new CollectionsExercises().useLinkedList();
     }
 
     public LinkedList<Integer> useLinkedList() {
@@ -50,10 +32,10 @@ public class CollectionsExercises {
         } catch (Exception e){
             e.printStackTrace();
         }
-        System.out.println("Head of list : " + value);
-        System.out.println(list);
+        System.out.println(value);
+    
         return list;
-        //throw new RuntimeException("Not implemented");
+        
     }
        
 
@@ -69,25 +51,21 @@ public class CollectionsExercises {
         
         Stack<Integer> stack = new Stack<Integer>();
         try{
-        stack.push(5);
-        stack.push(6);
-        stack.push(8);
-        stack.push(9);
-        //System.out.println("Stack = " + stack);
-        //System.out.println("Stack peek value = " + stack.peek());
-        System.out.println("The first element of the"
-                + " stack on the screen is: " + stack.firstElement());       
-        System.out.println("The last element of the "
-                + " stack on the screen is: " + stack.lastElement());
-        System.out.println(stack.lastElement());
-        System.out.println("Stack pop = " + stack.pop());
+        stack.add(5);
+        stack.add(6);
+        stack.add(8);
+        stack.add(9);
+        
+        System.out.print(stack.firstElement());
+        System.out.print(stack.lastElement());
+        System.out.print(stack.pop());
         stack.push(4);
-        System.out.println("new stack = " + stack);
         }catch(Exception e){
             e.printStackTrace();
         }
+       
         return stack;
-        //throw new RuntimeException("Not implemented");
+        
     }
 
     public ArrayDeque<Integer> useArrayDeque() {
@@ -105,16 +83,17 @@ public class CollectionsExercises {
         array.add(6);
         array.add(8);
         array.add(9);
-        System.out.println(array);
-        System.out.println(array.getFirst());
-        System.out.println(array.getLast());
-        System.out.println(array.poll());
-        System.out.println(array.element());
+        
+        System.out.print(array.getFirst());
+        System.out.print(array.getLast());
+        System.out.print(array.poll());
+        int s = array.element();
+        System.out.print(s);
         }catch(Exception e){
             e.printStackTrace();
         }
         return array;
-        //throw new RuntimeException("Not implemented");
+       
     }
 
     public HashMap<Integer, String> useHashMap() {
@@ -130,6 +109,7 @@ public class CollectionsExercises {
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
         HashMap<Integer, String> map = new HashMap<>();
+    
         try{
         map.put(1, "TypeScript");
         map.put(2, "Kotlin");
@@ -137,19 +117,30 @@ public class CollectionsExercises {
         map.put(4, "Java");
         map.put(5, "JavaScript");
         map.put(6, "Rust");
-        for(Map.Entry<Integer,String> e : map.entrySet()){
-            int key =  e.getKey();
-            String value =  e.getValue();
-            System.out.println("Key = " + key + ", Value = " + value );
-        }
+        
+        List<Integer> l1;
+        List<String> l2;
+                Set<Integer> keys = map.keySet();
+               // for (Integer k : keys) {
+                    //System.out.println( k);
+        
+               // }
+                Collection<String> values = map.values();
+               // for (String v : values) {
+                    //System.out.println( v);
+                //}
+                l1 = keys.stream().collect(Collectors.toList());
+                l2 = values.stream().toList();
+                System.out.print(l1);
+                System.out.print(l2);
+        
         boolean checkValue = map.containsValue("English");
-        String outputValue = checkValue?"Yes it contains the value inputted": "No it does not contain the value inputted";
-        System.out.println(checkValue);
-        System.out.println(outputValue);
+        System.out.print(checkValue);
+        
 
        }catch(Exception e){
         e.printStackTrace();
-    }
+        }
 
         return map;
         //throw new RuntimeException("Not implemented");
