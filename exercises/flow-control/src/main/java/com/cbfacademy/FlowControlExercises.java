@@ -8,26 +8,8 @@ import java.util.Map;
 
 public class FlowControlExercises {
     public static void main(String[] args) {
-        Integer[] a = new Integer[]{213, 54, 91, 187, 2001, 2023}; //[Fizz, Fizz, 91, 187, Fizz, 2023];
-        List<Integer> numbers = Arrays.asList(a);
-        ArrayList<Integer> b = new ArrayList<>();
-                b.add(1);
-                b.add(2);
-                b.add(4);
-                b.add(8);
-                b.add(11);
-                b.add(13);
-                b.add(17);
         
-        System.out.println(new FlowControlExercises().sumOfOddsAndSumOfEvens());
 
-        //System.out.println(numbers);
-       
-        System.out.println(numbers);
-        new FlowControlExercises().fizzBuzz(numbers);
-        new FlowControlExercises().whichMonth(12);
-        new FlowControlExercises().reverse(b);
-        
     }
 
     public List<String> fizzBuzz(List<Integer> numbers) {
@@ -43,28 +25,24 @@ public class FlowControlExercises {
         List<Integer> newList = new ArrayList<>();
         List<String> anotherList = new ArrayList<>();
         newList.addAll(numbers);
-        //System.out.println("newList = " + newList);
+       
         for (int i = 0; i < newList.size(); i++) {
             try {
-                //System.out.println(newList.get(i));
+                
                 if (newList.get(i) % 3 == 0 && newList.get(i) % 5 == 0) {
                     s = "FizzBuzz";
-                    // System.out.println("add new string");
                     anotherList.add(s);
                 } else if (newList.get(i) % 5 == 0) {
                     s = "Buzz";
-                    // System.out.println("add new string");
                     anotherList.add(s);
 
                 } else if (newList.get(i) % 3 == 0) {
                     s = "Fizz";
-                    //System.out.println("add new string");
                     anotherList.add(s);
 
                 } else {
                     int x = newList.get(i);
                     s = String.valueOf(x);
-                    //System.out.println("add new string");
                     anotherList.add(s);
                 }
 
@@ -75,7 +53,7 @@ public class FlowControlExercises {
 
         System.out.println(anotherList);
         return anotherList;
-        //throw new RuntimeException("Not implemented");
+        
     }
 
     public String whichMonth(Integer number) {
@@ -117,7 +95,7 @@ public class FlowControlExercises {
         }
         System.out.println(month);
         return month;
-        //throw new RuntimeException("Not implemented");
+        
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
@@ -167,7 +145,7 @@ public class FlowControlExercises {
         e.printStackTrace();
     }
        return map;
-        //throw new RuntimeException("Not implemented");
+       
     }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
@@ -181,21 +159,15 @@ public class FlowControlExercises {
         System.out.println("anotherList = " + anotherList);
         List<Integer> newList = new ArrayList<>();//will hold the reverse array of copy
         numbers = new ArrayList<>();
-        //System.out.println(anotherList);
-//        for(Integer i : anotherList){
-//            System.out.println(i);
-//            newList.add(i);
-//        }
+        
         try{
             for (int i = anotherList.size() - 1; i >= 0; --i) {
-            //System.out.println("This is x");
              x = anotherList.get(i);
             newList.add(x);
             }
         }catch(Exception e){
             e.printStackTrace();
         }
-       // throw new RuntimeException("Not implemented");
         System.out.println("newList = " + newList);
         return newList;
     }
