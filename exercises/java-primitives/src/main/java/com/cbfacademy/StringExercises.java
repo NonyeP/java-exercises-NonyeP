@@ -25,9 +25,8 @@ public class StringExercises {
     public Long howMany(String text, Character character) {
         // TODO - Write code to determine how many of the input ${character} are contained in the input ${text}
         
-         long count = 0;
+            long count = 0;
             int i = 0;
-           // for(int i = 0 ; i < text.length();i++){
             System.out.println("String length is : " + text.length());
             try {
                 while (i < text.length()) {
@@ -37,7 +36,7 @@ public class StringExercises {
                     }
                     i++;
                 }
-                //throw new RuntimeException("Not implemented");
+                
             }catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Exception in method caught");
@@ -57,18 +56,15 @@ public class StringExercises {
         }else{
             try{
             for(int i = 0 ; i < word.length();i++){
-                //System.out.println(word.charAt(i));
+                
             }
             for(int j = word.length()-1 ; j >= 0;j--){
-               // System.out.println(word.charAt(j));
                 char fromString = word.charAt(j);
                 newWord += String.valueOf(fromString);
-                //System.out.println(newWord);
+                
             }
             System.out.println(word + " and " + newWord );
-            // String w = new String(word);
-            //String w2 = new String(newWord);
-            //System.out.println(word + " and " + newWord);
+           
             if(word.equalsIgnoreCase(newWord)){
                 System.out.println("The input word is a Palindrome");
                 flag = true;
@@ -89,9 +85,7 @@ public class StringExercises {
         return "String Exercises";
     }
     public static void main(String[] args) {
-           // Date d = new Date();
-           // System.out.println(d);
-         // System.out.println();
+           
             System.out.println("\nThis is StringExercises class");
             System.out.println(new StringExercises().isPalindrome("Madam"));
             System.out.println(new StringExercises().howMany("hello", 'l'));
