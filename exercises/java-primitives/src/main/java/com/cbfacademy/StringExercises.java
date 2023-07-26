@@ -4,7 +4,7 @@ public class StringExercises {
 
     public String fromCharacters(char[] characters) {
         // TODO - Write code that creates a String from the input array of characters
-        String newString = " ";
+        String newString = "";
             try {
                 // TODO: Write code that creates a String from the input array of characters
                // for(int i = 0 ; i < characters.length -1;i++){

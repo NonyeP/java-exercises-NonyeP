@@ -48,7 +48,7 @@ public class FlowControlExercises {
             try {
                 //System.out.println(newList.get(i));
                 if (newList.get(i) % 3 == 0 && newList.get(i) % 5 == 0) {
-                    s = "FlowControlExercises";
+                    s = "FizzBuzz";
                     // System.out.println("add new string");
                     anotherList.add(s);
                 } else if (newList.get(i) % 5 == 0) {
