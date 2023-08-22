@@ -109,15 +109,13 @@ public class CollectionsExercises {
         //  - determine whether the map contains "English" as a language and print the result on the screen
         //  - return the map
         HashMap<Integer, String> map = new HashMap<>();
-    
-        try{
         map.put(1, "TypeScript");
         map.put(2, "Kotlin");
         map.put(3, "Python");
         map.put(4, "Java");
         map.put(5, "JavaScript");
         map.put(6, "Rust");
-        
+        try{
         List<Integer> l1;
         List<String> l2;
                 Set<Integer> keys = map.keySet();

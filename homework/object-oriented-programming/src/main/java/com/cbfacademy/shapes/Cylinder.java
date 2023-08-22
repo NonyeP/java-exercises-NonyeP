@@ -18,6 +18,10 @@ public class Cylinder extends Shape{
     }
 
     public static void main(String[] args) {
+        int[] A = new int[4];
+        A[0] = 0;
+        
+
         Shape sd = new Rectangle("Rectangle",2.3,24);
         System.out.println(sd.area());
     }
