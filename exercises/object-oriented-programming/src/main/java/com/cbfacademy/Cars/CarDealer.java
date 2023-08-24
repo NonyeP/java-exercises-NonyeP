@@ -1,4 +1,4 @@
-package com.cbfacademy.Cars;
+package com.cbfacademy.cars;
 
 public class CarDealer {
     public static void main(String[] args) {
