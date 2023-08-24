@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.stream.Stream;
+
 public class NioExercisesCopy {
     
         public static void main(String[] args) {
@@ -28,9 +29,9 @@ public class NioExercisesCopy {
              
             }
         
-         //copy output with nio
-         Path sourcePath = Paths.get("C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise.txt"); 
-         Path newFile = Paths.get("C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise4.txt");
+           //copy output with nio
+           Path sourcePath = Paths.get("C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise.txt"); 
+           Path newFile = Paths.get("C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise4.txt");
             try (OutputStream os = new FileOutputStream(newFile.toFile())) {
     
                 Files.copy(sourcePath, os);
@@ -38,8 +39,8 @@ public class NioExercisesCopy {
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
             }
-         //File content reversal
-          String fw2 = "C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise5.txt";
+            //File content reversal
+            String fw2 = "C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise5.txt";
             try {
              BufferedReader input = new BufferedReader(new FileReader(filePath1));
              ArrayList list = new ArrayList();
@@ -60,10 +61,11 @@ public class NioExercisesCopy {
     
              output.close();
     
-           }catch (IOException e) {
+            }catch (IOException e) {
             System.out.println(e.getMessage());
-           }
-        }
-    }
+            }
+         }
+
+ }
     
-}
+
