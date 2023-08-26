@@ -14,7 +14,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Stream;
+
+
 public class NioExercisesCopy {
     
         public static void main(String[] args) {
@@ -63,7 +66,20 @@ public class NioExercisesCopy {
            }catch (IOException e) {
             System.out.println(e.getMessage());
            }
+        
+
+        //new metod using NIO
+        //using sourcePath and newFile
+        Path newFile2 = Paths.get("C:\\Users\\Paul\\CBFAcademy\\java-exercises-NonyeP\\exercises\\input-output\\src\\main\\resources\\exercise51.txt");
+        try{ 
+         List<String> list = Files.readAllLines(sourcePath);
+         Collections.reverse(list);
+         Files.write(newFile2,list);
+        }catch(IOException exception){
+         System.out.println("Error in copying file");
         }
-    }
-    
+         
+      }
+   
+
 }
